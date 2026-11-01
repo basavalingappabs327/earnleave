@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans Kannada", "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2f7 0%, #dfe7f0 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 580px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(20, 30, 60, 0.12);
+  overflow: hidden;
+  padding: 0;
+}
+
+/* Modern Header Banner */
+.card-header {
+  background: linear-gradient(135deg, #2f5be0 0%, #4a7dfc 100%);
+  padding: 32px 40px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+}
+
+/* Form Container Content Padding */
+.form-content {
+  padding: 40px;
+}
+
+/* Shared Fieldset Defaults */
+fieldset {
+  border-radius: 12px;
+  padding: 24px 20px;
+  margin-bottom: 28px;
+  background: #ffffff;
+}
+
+legend {
+  font-size: 14.5px;
+  font-weight: 700;
+  padding: 0 8px;
+}
+
+fieldset .form-group:last-child {
+  margin-bottom: 0;
+}
+
+/* Fieldset 1: Blue Theme */
+.fieldset-employee {
+  border: 2px solid #2f5be0;
+}
+
+.fieldset-employee legend {
+  color: #2f5be0;
+}
+
+/* Fieldset 2: Green Theme */
+.fieldset-leave {
+  border: 2px solid #1fa971;
+}
+
+.fieldset-leave legend {
+  color: #1fa971;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13.5px;
+  color: #33414f;
+  font-weight: 600;
+}
+
+/* Input Fields with Pure White Background and Explicit Borders */
+select,
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #cfd8e3;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #1f2d3d;
+  background: #ffffff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Interactive Focused Colored States */
+.fieldset-employee input:focus, 
+.fieldset-employee select:focus {
+  outline: none;
+  border-color: #2f5be0;
+  box-shadow: 0 0 0 3px rgba(47, 91, 224, 0.15);
+}
+
+.fieldset-leave input:focus, 
+.fieldset-leave select:focus {
+  outline: none;
+  border-color: #1fa971;
+  box-shadow: 0 0 0 3px rgba(31, 169, 113, 0.15);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#generateButton {
+  width: 100%;
+  padding: 14px;
+  margin-top: 6px;
+  background: #2f5be0;
+  color: #fff;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+#generateButton:hover {
+  background: #2649bd;
+}
+
+#generateButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.download {
+  width: 100%;
+  padding: 14px;
+  margin-top: 14px;
+  background: #1fa971;
+  color: #fff;
+}
+
+.download:hover {
+  background: #178c5c;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.waiting {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.spinner {
+  width: 34px;
+  height: 34px;
+  margin: 0 auto 10px;
+  border: 4px solid #dbe4f3;
+  border-top-color: #2f5be0;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.pleaseWait {
+  font-weight: 600;
+  color: #1f2d3d;
+  margin-bottom: 4px;
+}
+
+#waitingSeconds {
+  font-size: 13px;
+  color: #6b7684;
+}
+
+.success {
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #e6f8ef;
+  color: #157347;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #bbf7d0;
+}
+
+.error {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #fdecea;
+  color: #b3261e;
+  font-size: 13.5px;
+  text-align: left;
+  white-space: pre-wrap;
+  border: 1px solid #fecaca;
+}
+
+@media (max-width: 480px) {
+  .card-header {
+    padding: 24px 20px;
+  }
+  .form-content {
+    padding: 24px 20px;
+  }
+}
